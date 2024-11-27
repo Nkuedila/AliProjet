@@ -1,3 +1,144 @@
 body {
-    background-color: skyblue;
+
+    background-color: gray;
+}
+
+/* Style de la page de catégories */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    padding: 20px;
+    margin-right: auto;
+    margin-top: 50px;
+
+
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Disposition de la grille */
+
+
+/* Style de la carte de catégorie */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de la carte */
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+/* Contenu de la carte */
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Bouton de la carte */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Container for the form */
+.my-custom-class-for-widget {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #272c42;
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style for form fields */
+.my-custom-class-for-widget input[type="quantity"],
+.my-custom-class-for-widget input[type="total"],
+.my-custom-class-for-widget input[type="datecommande"],
+.my-custom-class-for-widget select,
+.my-custom-class-for-widget textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.my-custom-class-for-widget .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.my-custom-class-for-widget .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form labels */
+.my-custom-class-for-widget label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Error styling */
+.my-custom-class-for-widget .form-error {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Optional additional styling for better form field alignment */
+.my-custom-class-for-widget .form-group {
+    margin-bottom: 15px;
 }

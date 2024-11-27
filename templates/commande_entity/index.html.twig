@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CommandeEntity index{% endblock %}
+
+{% block body %}
+    <h1>CommandeEntity index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>DateCommande</th>
+                <th>Etat</th>
+                <th>NomClient</th>
+                <th>TelephoneClient</th>
+                <th>EmailClient</th>
+                <th>AdresseClient</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commande_entity in commandes %}
+            <tr>
+                <td>{{ commande_entity.id }}</td>
+                <td>{{ commande_entity.quantity }}</td>
+                <td>{{ commande_entity.total }}</td>
+                <td>{{ commande_entity.dateCommande ? commande_entity.dateCommande|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ commande_entity.etat }}</td>
+                <td>{{ commande_entity.nomClient }}</td>
+                <td>{{ commande_entity.telephoneClient }}</td>
+                <td>{{ commande_entity.emailClient }}</td>
+                <td>{{ commande_entity.adresseClient }}</td>
+                <td>
+                    <a href="{{ path('app_commande_show', {'id': commande_entity.id}) }}">show</a>
+                    <a href="{{ path('app_commande_edit', {'id': commande_entity.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_commande_new') }}">Create new</a>
+{% endblock %}
